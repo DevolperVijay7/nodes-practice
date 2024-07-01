@@ -3,9 +3,18 @@
 */
 
 var http =require('http');
-const { StringDecoder } = require('string_decoder');
+var StringDecoder =require('string_decoder').StringDecoder;
 
 var url =require('url');
+var fs =require('fs');
+var _data =require('./lib/data');
+
+_data.create('test','newFile',{'vj':'test'},function (err){
+       console.log("this was the error",err);
+
+});
+
+
 
 
 
