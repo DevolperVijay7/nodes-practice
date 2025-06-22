@@ -2,7 +2,7 @@ var http =require('http');
 var url =require('url');
 var StringDecorder =require ('string_decoder').StringDecoder;
 var config =require('./config');
-
+var hadler =re
 var server= http.createServer(function(req,res){
 
     undefinedServer(req,res); 
@@ -95,22 +95,7 @@ console.log('Request recived on path:'+statusCode,queryStringObject)
 
 // define handelres 
 
-var handlers ={};
 
-handlers.sample =function(data,callback){
-   // callback a http status code , and payload object
-
-   callback(406,{'name':'sample handler'});
-    
-}
-
-handlers.ping = function(data,callback){
-    callback(200);
-}
-// not found handler 
- handlers.notFound = function(data,callback){
-  callback(404)  
- };
 
 
 // define a request router 
